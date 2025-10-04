@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripudaman Singh | Java Backend Developer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        :root {
+            --primary-color: #00aaff;
+            --text-color: #e4e4e4;
+            --bg-color: #0d1117;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            cursor: none;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            background-image: url('https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
+        a:hover, .btn:hover { cursor: none; }
+        .container { max-width: 1100px; margin: auto; padding: 2rem; }
+        h1, h2 { font-weight: 600; margin-bottom: 1rem; }
+        h2 { text-align: center; font-size: 2.5rem; }
+        .glass-card {
+            background: var(--glass-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 50px rgba(0, 170, 255, 0.3);
+        }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .navbar .logo { font-size: 1.5rem; font-weight: 700; }
+        .navbar .nav-links { list-style: none; display: flex; }
+        .navbar .nav-links li { margin-left: 2rem; }
+        .navbar .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 400; transition: color 0.3s ease; }
+        .navbar .nav-links a:hover { color: var(--primary-color); }
+        #hero { height: 80vh; display: flex; align-items: center; text-align: center; }
+        #hero .hero-content { max-width: 800px; }
+        #hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+        #hero .subtitle { font-size: 1.5rem; font-weight: 300; margin-bottom: 1.5rem; color: var(--primary-color); }
+        #hero p { margin-bottom: 2rem; }
+        .btn { display: inline-block; padding: 0.75rem 1.5rem; background: var(--primary-color); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; transition: background 0.3s ease; border: none; }
+        .btn:hover { background: #0088cc; }
+        .section { padding: 4rem 0; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .skill-category h3 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+        .skill-category ul { list-style: none; }
+        .skill-category ul li { margin-bottom: 0.5rem; background: rgba(255, 255, 255, 0.05); padding: 0.5rem; border-radius: 5px; }
+        #projects .project-card { margin-top: 2rem; }
+        .project-card h3 { font-size: 1.8rem; color: var(--primary-color); }
+        .project-card p { margin: 1rem 0; }
+        .tech-tags span { display: inline-block; background: var(--primary-color); color: #fff; padding: 0.3rem 0.7rem; border-radius: 5px; font-size: 0.9rem; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .leadership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .leadership-card h3 { color: var(--primary-color); }
+        footer { text-align: center; padding: 2rem 0; }
+        footer .social-links a { color: var(--text-color); font-size: 1.2rem; margin: 0 1rem; text-decoration: none; transition: color 0.3s ease; }
+        footer .social-links a:hover { color: var(--primary-color); }
+        #cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+            z-index: 9999;
+        }
+        #cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--primary-color);
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: all 0.15s ease-out;
+            z-index: 9999;
+        }
+        #cursor-dot.grow, #cursor-outline.grow {
+            width: 60px;
+            height: 60px;
+            border-width: 3px;
+        }
+        #cursor-dot.grow {
+             background-color: rgba(0, 170, 255, 0.2);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .navbar { flex-direction: column; }
+            .navbar .nav-links { margin-top: 1rem; }
+            .navbar .nav-links li { margin: 0 0.5rem; }
+            #hero { height: auto; padding: 4rem 0;}
+            #cursor-dot, #cursor-outline { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <header class="navbar">
+        <div class="logo">Ripudaman Singh</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content glass-card">
+                <h1>Ripudaman Singh</h1>
+                <p class="subtitle">Java Backend Developer</p>
+                <p>
+                    Aspiring Java Backend Developer with a strong foundation in Object-Oriented Programming, Data Structures, and Algorithms. Proficient in building robust and scalable RESTful APIs using the Spring Boot framework. Eager to apply problem-solving skills to contribute to a challenging software engineering role.
+                </p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="section">
+         <div class="container">
+            <h2>About Me</h2>
+            <div class="glass-card" style="margin-top: 2rem; text-align: center;">
+                <p>
+                   I am currently pursuing my B.Tech in Computer Science & Engineering from Shri Ramswaroop Memorial University, expecting to graduate in 2026. I am passionate about developing high-quality, impactful backend systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Java (Core & Advanced)</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3>Backend & Frameworks</h3>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>Spring Security</li>
+                        <li>Spring Data JPA</li>
+                        <li>Hibernate</li>
+                        <li>JWT</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3>Database & Tools</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>Git & GitHub</li>
+                        <li>Maven</li>
+                        <li>Postman</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                </div>
+                 <div class="skill-category glass-card">
+                    <h3>Frontend (Basic)</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card glass-card">
+                <h3>E-Commerce Backend REST API</h3>
+                <p>
+                    Developed a comprehensive backend service for an e-commerce platform using Java and Spring Boot. Implemented secure user authentication and authorization using Spring Security and JSON Web Tokens (JWT). Designed and built RESTful APIs for full CRUD operations for product and user management. Managed data persistence by integrating a MySQL database with Spring Data JPA and Hibernate.
+                </p>
+                <div class="tech-tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Spring Security</span>
+                    <span>Spring Data JPA</span>
+                    <span>MySQL</span>
+                    <span>JWT</span>
+                    <span>Maven</span>
+                </div>
+                <a href="https://github.com/RajpootRipu321" target="_blank" class="btn" style="margin-top: 1rem;">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="leadership" class="section">
+        <div class="container">
+            <h2>Leadership & Extracurriculars</h2>
+            <div class="leadership-grid">
+                <div class="leadership-card glass-card">
+                    <h3>NCC Air Wing Cadet</h3>
+                    <p>Demonstrated team leadership, discipline, and participated in national service initiatives.</p>
+                </div>
+                <div class="leadership-card glass-card">
+                    <h3>Volleyball Coordinator</h3>
+                    <p>Coordinated college sports teams and successfully organized intra-university events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.2rem; font-weight: 600;"><a href="mailto:royalripu123@gmail.com" style="color: var(--primary-color); text-decoration: none;">royalripu123@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ripudaman-singh-023685242/" target="_blank" title="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/RajpootRipu321" target="_blank" title="GitHub">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const cursorDot = document.querySelector("#cursor-dot");
+        const cursorOutline = document.querySelector("#cursor-outline");
+        window.addEventListener("mousemove", function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.style.left = `${posX}px`;
+            cursorOutline.style.top = `${posY}px`;
+        });
+        const links = document.querySelectorAll("a, .btn");
+        links.forEach((link) => {
+            link.addEventListener("mouseenter", () => {
+                cursorDot.classList.add("grow");
+                cursorOutline.classList.add("grow");
+            });
+            link.addEventListener("mouseleave", () => {
+                cursorDot.classList.remove("grow");
+                cursorOutline.classList.remove("grow");
+            });
+        });
+    </script>
+</body>
+</html>
