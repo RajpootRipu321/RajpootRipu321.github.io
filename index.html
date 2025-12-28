@@ -7,28 +7,24 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-:root{
---primary-color:#00aaff;--heading-color:#ffb84d;--text-color:#e4e4e4;
---bg-color:#0d1117;--glass-bg:rgba(255,255,255,.08);--glass-border:rgba(255,255,255,.12);}
+:root{--primary:#00aaff;--heading:#ffb84d;--text:#e4e4e4;--bg:#0d1117;--glass:rgba(255,255,255,.08)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins,sans-serif;background:var(--bg-color) url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80") center/cover fixed;color:var(--text-color)}
+body{font-family:Poppins,sans-serif;background:var(--bg) url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80") center/cover fixed;color:var(--text)}
 .container{max-width:1100px;margin:auto;padding:2rem}
-h1,h2,h3{color:var(--heading-color);margin-bottom:1rem;font-weight:700}
-.navbar{position:sticky;top:0;z-index:10;padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.5);backdrop-filter:blur(8px)}
-.navbar nav a{color:var(--text-color);margin-left:1.5rem;text-decoration:none}
-.navbar nav a:hover{color:var(--primary-color)}
-.btn,.btn-glass{padding:.8rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:600}
-.btn{background:var(--primary-color);color:#fff}
-.btn-glass{border:1px solid var(--primary-color);color:var(--primary-color)}
-.glass-card{background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(10px);padding:2rem;border-radius:16px;margin-top:1.5rem}
-#hero{text-align:center;padding:6rem 0 4rem}
+h1,h2{color:var(--heading)}
+.navbar{position:sticky;top:0;display:flex;justify-content:space-between;padding:1rem 2rem;background:rgba(0,0,0,.6)}
+.navbar a{color:white;text-decoration:none;margin-left:1rem}
+.btn{background:var(--primary);color:white;padding:.6rem 1.4rem;border-radius:8px}
+.btn-glass{border:1px solid var(--primary);color:var(--primary);padding:.6rem 1.4rem;border-radius:8px}
+.glass{background:var(--glass);backdrop-filter:blur(10px);padding:2rem;border-radius:14px;margin-top:1.5rem}
+#hero{text-align:center;padding:6rem 0}
 </style>
 </head>
 
 <body>
 
 <header class="navbar">
-<div style="font-size:1.5rem;font-weight:700;">Ripudaman Singh</div>
+<div style="font-size:1.4rem;font-weight:700">Ripudaman Singh</div>
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
@@ -40,18 +36,31 @@ h1,h2,h3{color:var(--heading-color);margin-bottom:1rem;font-weight:700}
 
 <section id="hero">
 <div class="container">
-<div class="glass-card">
+<div class="glass">
 <h1>Ripudaman Singh</h1>
-<p>Java Backend & Python Developer</p>
+<p>Java Backend & Python Web Developer</p>
 <a href="/Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a>
 </div>
 </div>
 </section>
 
-<footer id="contact">
+<section id="about">
+<div class="container">
+<div class="glass">
+<h2>About Me</h2>
+<p>I am pursuing B.Tech CSE (2026) at Shri Ramswaroop Memorial University and building backend systems using Java & Python.</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="glass">
 <h2>Contact Me</h2>
 <p><a href="/Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a></p>
-</footer>
+</div>
+</div>
+</section>
 
 </body>
 </html>
