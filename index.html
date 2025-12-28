@@ -1,265 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ripudaman Singh | Java Backend & PHP Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ripudaman Singh | Java Backend & Python Developer</title>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-        :root {
-            --primary-color: #00aaff;
-            --heading-color: #ffb84d;  
-            --text-color: #e4e4e4;
-            --bg-color: #0d1117;
-            --glass-bg: rgba(255, 255, 255, 0.08);
-            --glass-border: rgba(255, 255, 255, 0.12);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: Poppins, sans-serif;
-            background: var(--bg-color) url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80") center/cover fixed;
-            color: var(--text-color);
-        }
-
-        .container { max-width: 1100px; margin: auto; padding: 2rem; }
-
-        h1, h2, h3 {
-            color: var(--heading-color);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            padding: 1.2rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(8px);
-        }
-
-        .navbar nav a {
-            color: var(--text-color);
-            margin-left: 1.5rem;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: 0.3s;
-            font-weight: 500;
-        }
-
-        .navbar nav a:hover { color: var(--primary-color); }
-
-        /* BUTTONS */
-        .btn, .btn-glass {
-            padding: 0.8rem 1.6rem;
-            border-radius: 8px;
-            display: inline-block;
-            text-decoration: none;
-            margin: 0.4rem;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .btn {
-            background: var(--primary-color);
-            color: #fff;
-        }
-
-        .btn:hover { background: #0095dd; }
-
-        .btn-glass {
-            background: transparent;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .btn-glass:hover { background: rgba(0,170,255,0.2); }
-
-        /* GLASS CARD */
-        .glass-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 16px;
-            margin-top: 1.5rem;
-        }
-
-        /* HERO */
-        #hero { padding: 6rem 0 4rem; text-align: center; }
-
-        /* GRID LAYOUT */
-        .skills-grid {
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            margin-top: 2rem;
-        }
-
-        ul li { margin: 0.4rem 0; }
-
-        .tech-tags span {
-            padding: 0.3rem 0.7rem;
-            margin: 0.2rem;
-            background: var(--primary-color);
-            color: #fff;
-            border-radius: 6px;
-            display: inline-block;
-            font-size: 0.9rem;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 4rem 1rem;
-            margin-top: 5rem;
-            background: rgba(0,0,0,0.55);
-            backdrop-filter: blur(10px);
-        }
-
-        footer .social-links a {
-            color: #00c8ff;
-            margin: 0 1rem;
-            font-weight: 600;
-        }
-
-        footer .social-links a:hover { color: white; }
-
-        /* RESPONSIVE FIXES */
-        @media (max-width: 900px) {
-            .navbar nav { display: flex; flex-wrap: wrap; justify-content: center; }
-            .navbar nav a { margin: 0.7rem; }
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.5rem; }
-            .navbar { flex-direction: column; text-align: center; }
-            .navbar nav { margin-top: 0.6rem; }
-            .btn, .btn-glass { width: 100%; text-align: center; }
-            .glass-card { padding: 1.5rem; }
-        }
-    </style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root{
+--primary-color:#00aaff;--heading-color:#ffb84d;--text-color:#e4e4e4;
+--bg-color:#0d1117;--glass-bg:rgba(255,255,255,.08);--glass-border:rgba(255,255,255,.12);}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:var(--bg-color) url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80") center/cover fixed;color:var(--text-color)}
+.container{max-width:1100px;margin:auto;padding:2rem}
+h1,h2,h3{color:var(--heading-color);margin-bottom:1rem;font-weight:700}
+.navbar{position:sticky;top:0;z-index:10;padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.5);backdrop-filter:blur(8px)}
+.navbar nav a{color:var(--text-color);margin-left:1.5rem;text-decoration:none}
+.navbar nav a:hover{color:var(--primary-color)}
+.btn,.btn-glass{padding:.8rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:600}
+.btn{background:var(--primary-color);color:#fff}
+.btn-glass{border:1px solid var(--primary-color);color:var(--primary-color)}
+.glass-card{background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(10px);padding:2rem;border-radius:16px;margin-top:1.5rem}
+#hero{text-align:center;padding:6rem 0 4rem}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
-    <div class="logo" style="font-size:1.5rem; font-weight:700;">Ripudaman Singh</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="Ripudaman_Singh_CV.pdf" download class="btn-glass">Download CV</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div style="font-size:1.5rem;font-weight:700;">Ripudaman Singh</div>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="/Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<!-- HERO -->
 <section id="hero">
-    <div class="container">
-        <div class="glass-card">
-            <h1>Ripudaman Singh</h1>
-            <p style="color:var(--heading-color); font-size:1.2rem; font-weight:600;">Java Backend & PHP Web Developer</p>
-
-            <p>
-                Backend Developer skilled in Java, Spring Boot, REST APIs, MySQL & PHP.  
-                Experienced in building full-stack applications, dashboards, login systems,  
-                and database-driven platforms.
-            </p>
-
-            <a href="#projects" class="btn">View My Work</a>
-            <a href="Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a>
-        </div>
-    </div>
+<div class="container">
+<div class="glass-card">
+<h1>Ripudaman Singh</h1>
+<p>Java Backend & Python Developer</p>
+<a href="/Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a>
+</div>
+</div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="glass-card">
-            <p>
-                I am pursuing B.Tech CSE (2026) at Shri Ramswaroop Memorial University.  
-                I enjoy building backend systems, secure authentication flows,  
-                and full-stack PHP/Java applications.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <div class="container">
-        <h2>Technical Skills</h2>
-
-        <div class="skills-grid">
-            <div class="glass-card">
-                <h3>Languages</h3>
-                <ul><li>Java</li><li>PHP</li><li>SQL</li></ul>
-            </div>
-
-            <div class="glass-card">
-                <h3>Tools & Database</h3>
-                <ul><li>MySQL</li><li>GitHub</li></ul>
-            </div>
-
-            <div class="glass-card">
-                <h3>Frontend Basics</h3>
-                <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-    <div class="container">
-        <h2>Projects</h2>
-
-        <div class="glass-card">
-            <h3>Student & Admin Panel – Live Web App</h3>
-            <p>Complete CRUD system with MySQL, authentication, and responsive UI.</p>
-
-            <ul>
-                <li>Admin & Student Login</li>
-                <li>Student CRUD Operations</li>
-                <li>Real-time MySQL Result Handling</li>
-                <li>Responsive UI</li>
-            </ul>
-
-            <div class="tech-tags">
-                <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span>
-            </div>
-
-            <a href="https://ripu-exam.42web.io/?i=1" target="_blank" class="btn">Live Project</a>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
 <footer id="contact">
-    <h2>Contact Me</h2>
-
-    <p><a href="mailto:royalripu123@gmail.com" style="color:#00c8ff;">royalripu123@gmail.com</a></p>
-
-    <a href="Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a>
-
-    <div class="social-links">
-        <a href="https://www.linkedin.com/in/ripudaman-singh-023685242/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/RajpootRipu321" target="_blank">GitHub</a>
-    </div>
-
-    <p style="margin-top:1rem; color:#bbb;">© 2025 Ripudaman Singh. All Rights Reserved.</p>
+<h2>Contact Me</h2>
+<p><a href="/Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a></p>
 </footer>
 
 </body>
