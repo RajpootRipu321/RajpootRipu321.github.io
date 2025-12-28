@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ripudaman Singh | Java Backend & Python Developer</title>
+    <title>Ripudaman Singh | Java Backend Developer</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -33,6 +33,7 @@
             font-weight: 700;
         }
 
+        /* NAVBAR */
         .navbar {
             position: sticky;
             top: 0;
@@ -51,21 +52,38 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: 500;
+            transition: 0.3s;
         }
 
         .navbar nav a:hover { color: var(--primary-color); }
 
+        /* BUTTONS */
         .btn, .btn-glass {
             padding: 0.8rem 1.6rem;
             border-radius: 8px;
+            display: inline-block;
             text-decoration: none;
             margin: 0.4rem;
             font-weight: 600;
+            transition: 0.3s;
         }
 
-        .btn { background: var(--primary-color); color: #fff; }
-        .btn-glass { border: 1px solid var(--primary-color); color: var(--primary-color); }
+        .btn {
+            background: var(--primary-color);
+            color: #fff;
+        }
 
+        .btn:hover { background: #0095dd; }
+
+        .btn-glass {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-glass:hover { background: rgba(0,170,255,0.2); }
+
+        /* GLASS CARD */
         .glass-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
@@ -75,29 +93,76 @@
             margin-top: 1.5rem;
         }
 
+        /* HERO */
         #hero { padding: 6rem 0 4rem; text-align: center; }
+
+        /* GRID */
+        .skills-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            margin-top: 2rem;
+        }
+
+        ul li { margin: 0.4rem 0; }
+
+        .tech-tags span {
+            padding: 0.3rem 0.7rem;
+            margin: 0.2rem;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 6px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-top: 5rem;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        footer .social-links a {
+            color: #00c8ff;
+            margin: 0 1rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        footer .social-links a:hover { color: white; }
+
+        @media (max-width: 600px) {
+            .navbar { flex-direction: column; text-align: center; }
+            .navbar nav { margin-top: 0.6rem; }
+            .btn, .btn-glass { width: 100%; }
+        }
     </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
     <div style="font-size:1.5rem; font-weight:700;">Ripudaman Singh</div>
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="/Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a>
+        <a href="Ripu_Rajpoot_resume.pdf" download class="btn-glass">Download CV</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
+<!-- HERO -->
 <section id="hero">
     <div class="container">
         <div class="glass-card">
             <h1>Ripudaman Singh</h1>
             <p style="color:var(--heading-color); font-size:1.2rem; font-weight:600;">
-                Java Backend & Python Developer
+                Java Backend Developer
             </p>
 
             <p>
@@ -118,6 +183,90 @@
     </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="glass-card">
+            <p>
+                I am pursuing B.Tech in Computer Science Engineering (2026) at
+                Shri Ramswaroop Memorial University.
+                I focus on Java backend development, database systems,
+                and building real-world applications with clean architecture.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+        <h2>Technical Skills</h2>
+
+        <div class="skills-grid">
+            <div class="glass-card">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <h3>Backend & Database</h3>
+                <ul>
+                    <li>JDBC</li>
+                    <li>MySQL</li>
+                    <li>DAO Pattern</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <h3>Tools</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>IntelliJ IDEA</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="glass-card">
+            <h3>Payroll Management System</h3>
+            <p>
+                Desktop-based Java application for managing employee payroll
+                with full CRUD operations and MySQL database integration.
+            </p>
+
+            <ul>
+                <li>Add, Update, Delete, and View Employees</li>
+                <li>DAO-based layered architecture</li>
+                <li>JDBC + MySQL integration</li>
+                <li>Dynamic JTable-based UI</li>
+            </ul>
+
+            <div class="tech-tags">
+                <span>Java</span>
+                <span>Swing</span>
+                <span>JDBC</span>
+                <span>MySQL</span>
+            </div>
+
+            <a href="https://github.com/RajpootRipu321/PayrollSystem"
+               target="_blank" class="btn">
+                View on GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer id="contact">
     <h2>Contact Me</h2>
     <p>
