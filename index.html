@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ripudaman Singh | Java Backend Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -22,15 +22,14 @@ body{
   font-family:Poppins,sans-serif;
   background:radial-gradient(circle at top,#142033,#0d1117 60%);
   color:var(--text);
+  line-height:1.8;
 }
 
 a{text-decoration:none;color:inherit;}
-.container{max-width:1150px;margin:auto;padding:0 1.2rem;}
 section{padding:6rem 0;}
+.container{max-width:1150px;margin:auto;padding:0 1.5rem;}
 h1,h2,h3{color:var(--accent);}
-p{line-height:1.8;}
 
-/* NAVBAR */
 header{
   position:sticky;top:0;z-index:100;
   background:rgba(0,0,0,.6);
@@ -38,63 +37,38 @@ header{
   display:flex;justify-content:space-between;
   align-items:center;padding:1.2rem 2rem;
 }
-header nav a{margin-left:1.4rem;font-weight:500;}
+header nav a{margin-left:1.5rem;font-weight:500;}
 header nav a:hover{color:var(--primary);}
 
-/* HERO */
-#hero{text-align:center;position:relative;}
-.glow{
-  position:absolute;top:-180px;left:50%;
-  transform:translateX(-50%);
-  width:600px;height:600px;
-  background:radial-gradient(circle,var(--primary),transparent 70%);
-  filter:blur(140px);opacity:.35;z-index:-1;
-}
 .hero-card{
-  max-width:950px;margin:auto;
+  max-width:950px;margin:auto;text-align:center;
   background:var(--glass);
   border:1px solid var(--border);
   border-radius:22px;
-  padding:3.8rem 2.8rem;
+  padding:3.5rem 2.5rem;
   backdrop-filter:blur(15px);
   box-shadow:0 40px 80px rgba(0,0,0,.6);
 }
 
-.hero-card h1{font-size:2.7rem;}
 .hero-meta{
-  margin-top:.8rem;
-  font-size:.95rem;
-  color:#cfd8dc;
+  font-size:.95rem;margin-top:.6rem;color:#cfd8dc;
 }
 .hero-meta a{color:var(--primary);font-weight:500;}
-.hero-meta span{margin:0 .4rem;}
-
-.hero-card img{
-  width:90px;
-  margin:1.8rem auto;
-  display:block;
-}
-
-.hero-card p{
-  margin-top:1.4rem;
-  font-size:1.05rem;
-}
 
 .btn{
-  display:inline-block;margin-top:2.2rem;
+  display:inline-block;margin-top:2rem;
   padding:.9rem 1.9rem;
   border-radius:8px;
   font-weight:600;
   background:var(--primary);color:#fff;
 }
 .btn:hover{background:#0095dd;}
+
 .btn-outline{
   background:transparent;border:1px solid var(--primary);
   color:var(--primary);margin-left:.8rem;
 }
-.btn-outline:hover{background:rgba(0,170,255,.15);}
 
-/* CARDS */
 .card{
   background:var(--glass);
   border:1px solid var(--border);
@@ -102,44 +76,29 @@ header nav a:hover{color:var(--primary);}
   padding:2.6rem;
   margin-top:2.8rem;
   backdrop-filter:blur(12px);
-  transition:.4s;
-}
-.card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 30px 60px rgba(0,0,0,.6);
 }
 
-/* GRID */
 .grid{
   display:grid;
   gap:2.2rem;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 }
 
-/* TAGS */
 .tags span{
-  display:inline-block;
   background:var(--primary);
   padding:.35rem .8rem;
   border-radius:6px;
   font-size:.85rem;
   margin:.3rem;
+  display:inline-block;
 }
 
-/* FOOTER */
 footer{
-  background:rgba(0,0,0,.6);
-  backdrop-filter:blur(10px);
   text-align:center;
   padding:4rem 1rem;
+  background:rgba(0,0,0,.6);
 }
 footer a{color:var(--primary);font-weight:600;margin:0 .8rem;}
-footer a:hover{color:#fff;}
-
-@media(max-width:600px){
-  header{flex-direction:column;}
-  header nav{margin-top:.8rem;}
-}
 </style>
 </head>
 
@@ -151,41 +110,36 @@ footer a:hover{color:#fff;}
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section id="hero">
-  <div class="glow"></div>
   <div class="hero-card">
-
     <h1>Ripudaman Singh</h1>
 
-    <!-- RESUME STYLE CONTACT LINE -->
     <div class="hero-meta">
-      📧 <a href="mailto:royalripu123@gmail.com">royalripu123@gmail.com</a>
-      <span>|</span>
-      📞 9423887033
-      <span>|</span>
-      <a href="https://www.linkedin.com/in/ripudaman-singh-023685242/" target="_blank">LinkedIn</a>
-      <span>|</span>
+      📧 <a href="mailto:royalripu123@gmail.com">royalripu123@gmail.com</a> |
+      📞 9423887033 |
+      <a href="https://www.linkedin.com/in/ripudaman-singh-023685242/" target="_blank">LinkedIn</a> |
       <a href="https://github.com/RajpootRipu321" target="_blank">GitHub</a>
     </div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
-
-    <p style="color:var(--accent);font-weight:600;">
+    <p style="margin-top:1.2rem;font-weight:600;color:var(--accent);">
       Java Backend Developer
     </p>
 
     <p>
-      Backend-focused engineer specializing in <b>Java, Spring Boot,
-      REST APIs, JWT Security, and MySQL</b>.
-      I build scalable, secure, production-ready backend systems.
+      Backend-focused engineer specializing in
+      <b>Java, Spring Boot, REST APIs, JWT Authentication, Hibernate, and MySQL</b>.
+      I build secure, scalable, production-ready backend systems.
     </p>
 
-    <a class="btn" href="Ripu_Rajpoot_resume.pdf" download>Download Resume</a>
-    <a class="btn btn-outline" href="https://github.com/RajpootRipu321" target="_blank">View GitHub</a>
+    <a class="btn" href="Ripudaman_Singh (2).pdf" download>
+      Download Resume
+    </a>
   </div>
 </section>
 
@@ -194,12 +148,10 @@ footer a:hover{color:#fff;}
   <div class="container">
     <h2>About Me</h2>
     <div class="card">
-      <p>
-        I am pursuing B.Tech in Computer Science Engineering (2026) at
-        Shri Ramswaroop Memorial University.
-        My core focus is backend engineering using Java,
-        clean architecture, database design, and API security.
-      </p>
+      I am pursuing B.Tech in Computer Science Engineering (2026) at
+      Shri Ramswaroop Memorial University. My core strength lies in backend
+      engineering using Java, clean architecture, database design,
+      and API security.
     </div>
   </div>
 </section>
@@ -209,10 +161,10 @@ footer a:hover{color:#fff;}
   <div class="container">
     <h2>Backend Expertise</h2>
     <div class="grid">
-      <div class="card"><h3>Languages</h3><p>Java, SQL</p></div>
-      <div class="card"><h3>Backend</h3><p>Spring Boot, REST APIs, JPA</p></div>
-      <div class="card"><h3>Security</h3><p>JWT, Spring Security</p></div>
-      <div class="card"><h3>Tools</h3><p>Git, GitHub, Postman, IntelliJ</p></div>
+      <div class="card"><h3>Languages</h3>Java, SQL</div>
+      <div class="card"><h3>Backend</h3>Spring Boot, REST APIs, Hibernate</div>
+      <div class="card"><h3>Security</h3>Spring Security, JWT</div>
+      <div class="card"><h3>Tools</h3>Git, GitHub, Postman, IntelliJ</div>
     </div>
   </div>
 </section>
@@ -224,27 +176,43 @@ footer a:hover{color:#fff;}
 
     <div class="card">
       <h3>Banking System – Spring Boot</h3>
-      <p>Secure backend with JWT authentication and role-based access.</p>
+      <p>Secure backend system with JWT authentication.</p>
       <div class="tags"><span>Java</span><span>Spring Boot</span><span>JWT</span><span>MySQL</span></div>
       <a class="btn" href="https://github.com/RajpootRipu321/banking-system-springboot" target="_blank">GitHub</a>
     </div>
 
     <div class="card">
       <h3>E-Commerce Backend API</h3>
-      <p>RESTful backend API for users, products, and orders.</p>
+      <p>RESTful backend APIs for products and users.</p>
       <div class="tags"><span>Java</span><span>Spring Boot</span><span>REST</span></div>
       <a class="btn" href="https://github.com/RajpootRipu321/ecommerce-backend-project" target="_blank">GitHub</a>
     </div>
 
     <div class="card">
       <h3>Payroll Management System</h3>
-      <p>Java Swing application with JDBC and DAO architecture.</p>
-      <div class="tags"><span>Java</span><span>Swing</span><span>JDBC</span><span>MySQL</span></div>
+      <p>Java Swing + JDBC payroll system.</p>
+      <div class="tags"><span>Java</span><span>Swing</span><span>JDBC</span></div>
       <a class="btn" href="https://github.com/RajpootRipu321/PayrollSystem" target="_blank">GitHub</a>
     </div>
   </div>
 </section>
 
+<!-- RESUME SNAPSHOT -->
+<section id="resume">
+  <div class="container">
+    <h2>Resume Snapshot</h2>
+    <div class="card">
+      <p><b>Education:</b> B.Tech CSE (2026) – Shri Ramswaroop Memorial University</p>
+      <p><b>Core Skills:</b> Java, Spring Boot, REST APIs, JWT, Hibernate, MySQL</p>
+      <p><b>Leadership:</b> NCC Air Wing Cadet, Volleyball Coordinator</p>
+      <a class="btn" href="Ripudaman_Singh (2).pdf" download>
+        Download Full Resume (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <footer id="contact">
   <h2>Contact</h2>
   <p><a href="mailto:royalripu123@gmail.com">royalripu123@gmail.com</a></p>
